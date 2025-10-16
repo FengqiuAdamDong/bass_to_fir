@@ -1,6 +1,7 @@
 import numpy as np
 import sys
 import os
+import subprocess
 #load the csv data
 datafile_name = sys.argv[1]
 filenames = []
@@ -22,6 +23,7 @@ for filename, ch in zip(filenames, ch_drive):
     command = f"rsync -rv --stats --progress -t /drives/{ch}/replace/{filename} adamdong@fir.computecanada.ca:/home/adamdong/projects/rrg-istairs-ad/adamdong/bass_vdiff/"
     #replace replace with {0,1,2,3,4,5,6,7}
     command = command.replace("replace", "{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}")
+    subprocess.run(command, shell=True)
     #run the command
-    os.system(command)
+    # os.system(command)
     print(command)
