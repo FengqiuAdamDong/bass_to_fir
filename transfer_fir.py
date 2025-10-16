@@ -14,7 +14,7 @@ with open(datafile_name, 'r') as f:
             #remove the \n at on the last part
             parts[-1] = parts[-1].strip()
             #the filename is the 2nd part, the ch drive is the last part
-            filenames.append(parts[1])
+            filenames.append(parts[2])
             ch_drive.append(parts[-1])
 
 #for each of the filenames, create the command and run it
